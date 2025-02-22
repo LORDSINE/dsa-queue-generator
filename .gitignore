@@ -1,0 +1,19 @@
+# Ignore compiled binary
+traffic_simulation
+
+# Ignore object files
+src/*.o
+
+# Ignore backup and swap files
+*~
+*.swp
+*.swo
+
+# Ignore dependency files
+*.d
+
+# Ignore editor and OS-specific files
+.DS_Store
+.vscode/
+.idea/
+
