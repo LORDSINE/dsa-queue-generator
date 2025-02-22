@@ -1,1 +1,1 @@
-# dsa-queue-generaotr
+# dsa-queue-generator
