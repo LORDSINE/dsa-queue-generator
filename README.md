@@ -1,12 +1,14 @@
-To compile the program run
+To compile the program, run:
 ```bash
 make
 ```
 
-and then run
+and then run the program:
 
 ```bash
 ./bin/traffic_simulation
-% or you can also run this command
+```
+Or, you can also use:
+```bash
 make run
 ```
