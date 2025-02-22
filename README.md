@@ -1,13 +1,10 @@
 To compile the program run
 ```bash
-gcc -o traffic_simulation main.c generator.c traffic_simulation.c -lSDL2 -lm
-
+make
 ```
 
 and then run
 
 ```bash
-./traffic_simulation
-
-
+./bin/traffic_simulation
 ```
