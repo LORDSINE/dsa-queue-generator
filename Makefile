@@ -18,3 +18,5 @@ $(BIN_DIR):
 clean:
 	rm -rf $(BIN_DIR)
 
+run:
+	./$(TARGET)
