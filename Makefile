@@ -19,4 +19,4 @@ clean:
 	rm -rf $(BIN_DIR)
 
 run:
-	./$(TARGET)
+	mkdir -p $(BIN_DIR) && $(CC) -o $(TARGET) $(SRC_FILES) $(LDFLAGS) && ./$(TARGET)
