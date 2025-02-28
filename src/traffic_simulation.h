@@ -53,6 +53,7 @@ typedef struct {
     Direction direction;
     TurnDirection turnDirection;
     VehicleState state;
+    int priority;
     float speed;
     float x;
     float y;
@@ -105,5 +106,9 @@ void initQueue(Queue* q);
 void enqueue(Queue* q, Vehicle vehicle);
 Vehicle dequeue(Queue* q);
 int isQueueEmpty(Queue* q);
+void initPriorityQueue(Queue *q);
+void enqueueWithPriority(Queue *q, Vehicle vehicle, int priority);
+Vehicle dequeueHighestPriority(Queue *q);
+int isPriorityQueueEmpty(Queue *q);
 
 #endif

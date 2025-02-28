@@ -508,6 +508,72 @@ void renderSimulation(SDL_Renderer *renderer, Vehicle *vehicles, TrafficLight *l
 }
 
 // Queue functions
+
+// Initialize a priority queue
+void initPriorityQueue(Queue *q) {
+    q->front = q->rear = NULL;
+    q->size = 0;
+}
+
+// Enqueue a vehicle with a given priority
+void enqueueWithPriority(Queue *q, Vehicle vehicle, int priority) {
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    newNode->vehicle = vehicle;
+    newNode->vehicle.priority = priority; // Set the priority for the vehicle
+    newNode->next = NULL;
+
+    if (q->rear == NULL) {
+        q->front = q->rear = newNode;
+    } else {
+        // Insert based on priority (higher priority comes first)
+        Node *current = q->front;
+        Node *previous = NULL;
+        while (current != NULL && current->vehicle.priority >= priority) {
+            previous = current;
+            current = current->next;
+        }
+
+        if (previous == NULL) {
+            // Insert at the front
+            newNode->next = q->front;
+            q->front = newNode;
+        } else {
+            // Insert in the middle or at the end
+            newNode->next = current;
+            previous->next = newNode;
+        }
+
+        if (current == NULL) {
+            q->rear = newNode;
+        }
+    }
+    q->size++;
+}
+// Dequeue the vehicle with the highest priority
+Vehicle dequeueHighestPriority(Queue *q) {
+    if (q->front == NULL) {
+        Vehicle emptyVehicle = {0};
+        return emptyVehicle;
+    }
+
+    Node *temp = q->front;
+    Vehicle vehicle = temp->vehicle;
+    q->front = q->front->next;
+
+    if (q->front == NULL) {
+        q->rear = NULL;
+    }
+
+    free(temp);
+    q->size--;
+    return vehicle;
+}
+
+// Check if the priority queue is empty
+int isPriorityQueueEmpty(Queue *q) {
+    return q->front == NULL;
+}
+
 void initQueue(Queue *q) {
     q->front = q->rear = NULL;
     q->size = 0;
