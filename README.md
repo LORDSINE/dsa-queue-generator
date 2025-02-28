@@ -3,22 +3,6 @@
 ## Overview  
 This project simulates a traffic management system at a junction connecting four major roads (A, B, C, and D). Each road has three lanes with specific rules for vehicle movement, traffic lights, and priority management. The system uses queues to manage vehicle flow and priority lanes, aiming to solve real-world traffic issues through data structures.
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [System Design](#system-design)
-  - [Road and Lane Structure](#road-and-lane-structure)
-  - [Normal and Priority Lanes](#normal-and-priority-lanes)
-  - [Traffic Lights](#traffic-lights)
-  - [Vehicle and Lane Queues](#vehicle-and-lane-queues)
-- [Algorithm](#algorithm)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Simulation Details](#simulation-details)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-
 ---
 
 ## Features
