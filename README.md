@@ -67,11 +67,11 @@ This project simulates a traffic management system at a junction connecting four
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/LORDSINE/dsa-queue-simulator.git
+    git clone https://github.com/LORDSINE/dsa-queue-generator.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd dsa-queue-simulator
+    cd dsa-queue-generator
     ```
 3. Compile and run the simulation:
     ```bash
