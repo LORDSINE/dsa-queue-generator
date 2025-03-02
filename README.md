@@ -64,6 +64,22 @@ This project simulates a traffic management system at a junction connecting four
 
 ---
 
+## Project Structure
+
+```
+dsa-queue-generator
+├── demo.gif
+├── Makefile
+├── README.md
+└── src
+    ├── generator.c
+    ├── main.c
+    ├── traffic_simulation.c
+    └── traffic_simulation.h
+```
+
+---
+
 ## Installation
 1. Clone the repository:
     ```bash
